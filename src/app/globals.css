@@ -53,7 +53,7 @@
 :root {
 	--radius: 0.625rem;
 	--background: oklch(1 0 0);
-	--foreground: oklch(0.141 0.005 285.823);
+	--foreground: oklch(14.077% 0.0044 285.776);
 	--card: oklch(1 0 0);
 	--card-foreground: oklch(0.141 0.005 285.823);
 	--popover: oklch(1 0 0);
@@ -125,5 +125,9 @@
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+
+	button {
+		@apply cursor-pointer;
 	}
 }

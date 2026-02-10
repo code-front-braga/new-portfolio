@@ -1,7 +1,5 @@
 const SitePage = () => {
-	return (
-		<h1 className="text-background text-4xl font-bold">Portfolio</h1>
-	);
+	return <div></div>;
 };
 
 export default SitePage;
