@@ -1,5 +1,7 @@
+import { PageContent } from '@/app/_shared/page-content';
+
 const Home = () => {
-	return <h1>Hello World</h1>;
+	return <PageContent />;
 };
 
 export default Home;
