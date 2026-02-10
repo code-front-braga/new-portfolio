@@ -39,7 +39,7 @@ export function NumberTicker({
 		if (isInView) {
 			const timer = setTimeout(() => {
 				motionValue.set(direction === 'down' ? startValue : value);
-			}, delay * 300);
+			}, delay * 100);
 			return () => clearTimeout(timer);
 		}
 	}, [motionValue, isInView, delay, value, direction, startValue]);
