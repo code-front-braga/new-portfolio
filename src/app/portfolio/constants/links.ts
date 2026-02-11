@@ -1,4 +1,4 @@
-export const SECTIONS = [
+export const LINKS = [
 	{
 		label: 'Início',
 		href: '/portfolio/home',

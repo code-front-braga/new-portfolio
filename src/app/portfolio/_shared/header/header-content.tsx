@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { MyLogo } from '@/app/_shared/my-logo';
 import { HyperText } from '@/components/ui/hyper-text';
 
+import { SOCIALS } from '../../constants/socials';
 import { NavDesktop } from './nav/desktop/nav-desktop';
 import { NavMobile } from './nav/mobile/nav-mobile';
 import { SearchContent } from './search/search-content';
@@ -24,6 +26,15 @@ export const HeaderContent = () => {
 				</div>
 				<div className="flex items-center gap-4">
 					<SearchContent />
+					<ul className="hidden items-center gap-4 lg:flex">
+						{SOCIALS.map(social => (
+							<li key={social.id} className="flex size-8 items-center justify-center rounded-full bg-white">
+								<Link href={social.href} rel="noopener noreferrer" target="_blank">
+									<Image src={social.iconSrc} alt={social.id} width={18} height={18} />
+								</Link>
+							</li>
+						))}
+					</ul>
 					<NavMobile />
 				</div>
 			</div>
