@@ -12,6 +12,7 @@ export const HeaderContent = () => {
 			<div className="flex w-full items-center justify-between">
 				<Link href="#hero" prefetch={true} className="flex items-center">
 					<MyLogo />
+					<span className="font-geist-sans font-extralight mr-1.5 text-xl lg:text-4xl text-zinc-400">/</span>
 					<div className="flex items-end gap-1">
 						<HyperText className="font-anta text-xl text-white lg:text-3xl">Braga</HyperText>
 						<HyperText className="font-anta text-base text-white lowercase lg:text-xl">.dev</HyperText>
