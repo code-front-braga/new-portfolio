@@ -26,7 +26,7 @@ export const PageContent = () => {
 	};
 
 	const handleComplete = () => {
-		replace('/portfolio');
+		replace('/portfolio/home');
 	};
 
 	return (
