@@ -1,6 +1,8 @@
 'use client';
 
-import { ArrowUpRightIcon, CircleFadingPlusIcon, FileInputIcon, FolderPlusIcon, SearchIcon } from 'lucide-react';
+import { ArrowUpRightIcon, BoxesIcon, FileUserIcon, SearchIcon, ZapIcon } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import {
@@ -11,7 +13,7 @@ import {
 	CommandItem,
 	CommandList,
 	CommandSeparator,
-	CommandShortcut,
+	// CommandShortcut,
 } from '@/components/ui/command';
 
 export const SearchDesktop = () => {
@@ -45,36 +47,53 @@ export const SearchDesktop = () => {
 				<CommandInput placeholder="Digite algo..." />
 				<CommandList>
 					<CommandEmpty>Nenhum resultado encontrado.</CommandEmpty>
-					<CommandGroup heading="Quick start">
-						<CommandItem>
-							<FolderPlusIcon aria-hidden="true" className="opacity-60" size={16} />
-							<span>New folder</span>
-							<CommandShortcut className="justify-center">⌘N</CommandShortcut>
+					<CommandGroup heading="Acesso Rápido">
+						<CommandItem asChild>
+							<Link href="/portfolio/projects" className="flex w-full items-center justify-between">
+								<div className="flex items-center gap-2">
+									<BoxesIcon aria-hidden="true" size={16} />
+									<span>Projetos</span>
+								</div>
+								<ArrowUpRightIcon className="ml-auto" />
+							</Link>
+							{/* <CommandShortcut className="justify-center">⌘N</CommandShortcut> */}
 						</CommandItem>
 						<CommandItem>
-							<FileInputIcon aria-hidden="true" className="opacity-60" size={16} />
-							<span>Import document</span>
-							<CommandShortcut className="justify-center">⌘I</CommandShortcut>
+							<Link href="/portfolio/skills" className="flex w-full items-center justify-between">
+								<div className="flex items-center gap-2">
+									<ZapIcon aria-hidden="true" size={16} />
+									<span>Skills</span>
+								</div>
+								<ArrowUpRightIcon className="ml-auto" />
+							</Link>
+							{/* <CommandShortcut className="justify-center">⌘I</CommandShortcut> */}
 						</CommandItem>
 						<CommandItem>
-							<CircleFadingPlusIcon aria-hidden="true" className="opacity-60" size={16} />
-							<span>Add block</span>
-							<CommandShortcut className="justify-center">⌘B</CommandShortcut>
+							<Link href="/portfolio/resume" className="flex w-full items-center justify-between">
+								<div className="flex items-center gap-2">
+									<FileUserIcon aria-hidden="true" size={16} />
+									<span>Currículo</span>
+								</div>
+								<ArrowUpRightIcon className="ml-auto" />
+							</Link>
+							{/* <CommandShortcut className="justify-center">⌘B</CommandShortcut> */}
 						</CommandItem>
 					</CommandGroup>
 					<CommandSeparator />
-					<CommandGroup heading="Navigation">
-						<CommandItem>
-							<ArrowUpRightIcon aria-hidden="true" className="opacity-60" size={16} />
-							<span>Go to dashboard</span>
-						</CommandItem>
-						<CommandItem>
-							<ArrowUpRightIcon aria-hidden="true" className="opacity-60" size={16} />
-							<span>Go to apps</span>
-						</CommandItem>
-						<CommandItem>
-							<ArrowUpRightIcon aria-hidden="true" className="opacity-60" size={16} />
-							<span>Go to connections</span>
+					<CommandGroup heading="Navegação">
+						<CommandItem asChild className='bg-zinc-900'>
+							<Link
+								href="https://github.com/code-front-braga"
+								rel="noopener noreferrer"
+								target="_blank"
+								className="flex w-full items-center justify-between"
+							>
+								<div className="flex items-center gap-2">
+									<Image src="/socials/github.svg" alt="Conta do GitHub" width={18} height={18} />
+									<span>Ir para o GitHub</span>
+								</div>
+								<ArrowUpRightIcon aria-hidden="true" size={16} />
+							</Link>
 						</CommandItem>
 					</CommandGroup>
 				</CommandList>
