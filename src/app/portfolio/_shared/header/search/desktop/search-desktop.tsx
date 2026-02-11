@@ -1,10 +1,11 @@
 'use client';
 
-import { ArrowUpRightIcon, BoxesIcon, FileUserIcon, SearchIcon, ZapIcon } from 'lucide-react';
+import { ArrowUpRightIcon, SearchIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+import { COMMAND_LINKS } from '@/app/portfolio/constants/links';
 import {
 	CommandDialog,
 	CommandEmpty,
@@ -13,8 +14,9 @@ import {
 	CommandItem,
 	CommandList,
 	CommandSeparator,
-	// CommandShortcut,
 } from '@/components/ui/command';
+
+import { CustomCommandItem } from '../../../comand-item';
 
 export const SearchDesktop = () => {
 	const [open, setOpen] = useState<boolean>(false);
@@ -48,40 +50,13 @@ export const SearchDesktop = () => {
 				<CommandList>
 					<CommandEmpty>Nenhum resultado encontrado.</CommandEmpty>
 					<CommandGroup heading="Acesso Rápido">
-						<CommandItem asChild>
-							<Link href="/portfolio/projects" className="flex w-full items-center justify-between">
-								<div className="flex items-center gap-2">
-									<BoxesIcon aria-hidden="true" size={16} />
-									<span>Projetos</span>
-								</div>
-								<ArrowUpRightIcon className="ml-auto" />
-							</Link>
-							{/* <CommandShortcut className="justify-center">⌘N</CommandShortcut> */}
-						</CommandItem>
-						<CommandItem>
-							<Link href="/portfolio/skills" className="flex w-full items-center justify-between">
-								<div className="flex items-center gap-2">
-									<ZapIcon aria-hidden="true" size={16} />
-									<span>Skills</span>
-								</div>
-								<ArrowUpRightIcon className="ml-auto" />
-							</Link>
-							{/* <CommandShortcut className="justify-center">⌘I</CommandShortcut> */}
-						</CommandItem>
-						<CommandItem>
-							<Link href="/portfolio/resume" className="flex w-full items-center justify-between">
-								<div className="flex items-center gap-2">
-									<FileUserIcon aria-hidden="true" size={16} />
-									<span>Currículo</span>
-								</div>
-								<ArrowUpRightIcon className="ml-auto" />
-							</Link>
-							{/* <CommandShortcut className="justify-center">⌘B</CommandShortcut> */}
-						</CommandItem>
+						{COMMAND_LINKS.map(link => (
+							<CustomCommandItem key={link.href} {...link} />
+						))}
 					</CommandGroup>
 					<CommandSeparator />
 					<CommandGroup heading="Navegação">
-						<CommandItem asChild className='bg-zinc-900'>
+						<CommandItem asChild className="bg-zinc-900">
 							<Link
 								href="https://github.com/code-front-braga"
 								rel="noopener noreferrer"

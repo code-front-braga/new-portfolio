@@ -11,7 +11,7 @@ export const MyLogo = () => {
 		<div className="relative flex size-10 items-center justify-center overflow-hidden lg:size-14">
 			<Image
 				src="/icon-logo-header.svg"
-				alt="Logo DEV.braga"
+				alt="Logo"
 				width={isMobile ? 120 : 160}
 				height={isMobile ? 120 : 160}
 				className="object-contain"

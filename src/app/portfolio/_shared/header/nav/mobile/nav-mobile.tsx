@@ -1,14 +1,14 @@
 'use client';
 
 import { CodeIcon } from 'lucide-react';
-import { motion } from 'motion/react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 import { MyLogo } from '@/app/_shared/my-logo';
-import { LINKS } from '@/app/portfolio/constants/links';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+
+import { LinksList } from '../../../links-list';
+import { ResumeDownloadButton } from '../../../resume-download-button';
 
 export const NavMobile = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -28,24 +28,10 @@ export const NavMobile = () => {
 							<MyLogo />
 						</SheetTitle>
 					</SheetHeader>
-					<ul className="flex flex-col items-start gap-6 px-4">
-						{LINKS.map((link, i) => {
-							const active = pathname === link.href;
-							return (
-								<motion.li
-									key={link.href}
-									className={`font-geist-sans text-sm ${active ? 'text-blue-400' : 'text-zinc-500 hover:text-zinc-300'}`}
-									initial={{ opacity: 0, x: -14 }}
-									animate={{ opacity: 1, x: 0 }}
-									transition={{ duration: 0.35, ease: 'easeOut', delay: 0.12 + i * 0.2 }}
-								>
-									<Link href={link.href} onClick={() => setIsOpen(false)}>
-										{link.label}
-									</Link>
-								</motion.li>
-							);
-						})}
-					</ul>
+					<LinksList pathname={pathname} ulClassName="flex-col px-4 items-start" />
+					<SheetFooter>
+						<ResumeDownloadButton />
+					</SheetFooter>
 				</SheetContent>
 			</Sheet>
 		</nav>
