@@ -30,7 +30,7 @@ export const PageContent = () => {
 	};
 
 	return (
-		<div className="grid min-h-screen place-items-center p-6">
+		<div className="flex min-h-screen w-full items-center">
 			<div className="border-border ring-border bg-card/60 mx-auto flex size-64 items-center justify-center rounded-full border p-4 shadow-sm ring-1 backdrop-blur">
 				<div className="flex flex-col items-center gap-3">
 					<div ref={counterRef} className="flex items-baseline gap-2">

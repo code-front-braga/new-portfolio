@@ -5,8 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-	--font-geist-sans: Geist, sans-serif;
-	--font-geist-mono: Geist_Mono, monospace;
+	--font-geist-sans: 'Geist', sans-serif;
+	--font-geist-mono: 'Geist Mono', monospace;
+	--font-alumni-sans: 'Alumni Sans', sans-serif;
+	--font-saira: 'Saira', sans-serif;
+	--font-anta: 'Anta', sans-serif;
+	--font-gemunu: 'Gemuno Libre', sans-serif;
 
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);

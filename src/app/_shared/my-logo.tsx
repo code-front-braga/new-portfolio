@@ -1,14 +1,20 @@
+'use client';
+
 import Image from 'next/image';
 
+import { useIsMobile } from '@/hooks/use-mobile';
+
 export const MyLogo = () => {
+	const isMobile = useIsMobile();
+
 	return (
-		<div className="relative flex h-12 w-fit items-center justify-center overflow-hidden">
+		<div className="relative flex h-10 w-8 items-center justify-center overflow-hidden lg:h-12 lg:w-10">
 			<Image
-				src="/logo.svg"
+				src="/icon-logo.svg"
 				alt="Logo DEV.braga"
-				width={140}
-				height={0}
-				className="object-cover"
+				width={isMobile ? 100 : 160}
+				height={isMobile ? 100 : 160}
+				className="object-contain"
 				priority
 				quality={100}
 			/>
