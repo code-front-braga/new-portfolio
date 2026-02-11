@@ -1,0 +1,9 @@
+import { SearchMobile } from './mobile/search-mobile';
+
+export const SearchContent = () => {
+	return (
+		<>
+			<SearchMobile />
+		</>
+	);
+};

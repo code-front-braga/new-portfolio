@@ -4,6 +4,7 @@ import { MyLogo } from '@/app/_shared/my-logo';
 import { HyperText } from '@/components/ui/hyper-text';
 
 import { NavContent } from './nav/nav-content';
+import { SearchContent } from './search/search-content';
 
 export const HeaderContent = () => {
 	return (
@@ -16,7 +17,10 @@ export const HeaderContent = () => {
 						<HyperText className="font-anta text-base text-white lowercase lg:text-xl">.dev</HyperText>
 					</div>
 				</Link>
-				<NavContent />
+				<div className="flex items-center gap-4">
+					<SearchContent />
+					<NavContent />
+				</div>
 			</div>
 		</header>
 	);

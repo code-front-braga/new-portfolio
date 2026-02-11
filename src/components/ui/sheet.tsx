@@ -1,6 +1,6 @@
 'use client';
 
-import { XIcon } from 'lucide-react';
+import { CodeXmlIcon } from 'lucide-react';
 import { Dialog as SheetPrimitive } from 'radix-ui';
 import * as React from 'react';
 
@@ -67,7 +67,7 @@ function SheetContent({
 				{children}
 				{showCloseButton && (
 					<SheetPrimitive.Close className="absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none">
-						<XIcon size={20} color="#fff" />
+						<CodeXmlIcon size={20} color="#fff" />
 						<span className="sr-only">Close</span>
 					</SheetPrimitive.Close>
 				)}

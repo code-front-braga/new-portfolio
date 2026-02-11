@@ -1,6 +1,6 @@
 'use client';
 
-import { MenuIcon } from 'lucide-react';
+import { CodeIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -15,7 +15,7 @@ export const NavMobile = () => {
 			<Sheet open={isOpen} onOpenChange={setIsOpen}>
 				<SheetTrigger asChild>
 					<button>
-						<MenuIcon color="#fff" />
+						<CodeIcon color="#fff" />
 					</button>
 				</SheetTrigger>
 				<SheetContent className="bg-transparent backdrop-blur-md">
