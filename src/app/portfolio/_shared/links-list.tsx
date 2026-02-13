@@ -6,9 +6,10 @@ import { LINKS } from '../constants/links';
 type LinkListProps = {
 	pathname: string;
 	ulClassName?: string;
+	onOpen?: () => void;
 };
 
-export const LinksList = ({ pathname, ulClassName }: LinkListProps) => {
+export const LinksList = ({ pathname, ulClassName, onOpen }: LinkListProps) => {
 	return (
 		<ul className={`flex gap-6 ${ulClassName}`}>
 			{LINKS.map((link, i) => {
@@ -21,7 +22,9 @@ export const LinksList = ({ pathname, ulClassName }: LinkListProps) => {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.35, ease: 'easeOut', delay: 0.12 + i * 0.6 }}
 					>
-						<Link href={link.href}>{link.label}</Link>
+						<Link href={link.href} onClick={onOpen}>
+							{link.label}
+						</Link>
 					</motion.li>
 				);
 			})}

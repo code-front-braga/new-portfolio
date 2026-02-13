@@ -28,7 +28,7 @@ export const NavMobile = () => {
 							<MyLogo />
 						</SheetTitle>
 					</SheetHeader>
-					<LinksList pathname={pathname} ulClassName="flex-col px-4 items-start" />
+					<LinksList onOpen={() => setIsOpen(false)} pathname={pathname} ulClassName="flex-col px-4 items-start" />
 					<SheetFooter>
 						<ResumeDownloadButton />
 					</SheetFooter>

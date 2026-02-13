@@ -5,24 +5,26 @@ import Image from 'next/image';
 
 export const HomeImage = () => {
 	return (
-		<motion.div
-			className="absolute left-0 h-[120vh] w-full lg:relative lg:-left-40 lg:h-full"
-			initial={{ opacity: 0, x: -80 }}
-			animate={{ opacity: 1, x: 0 }}
-			transition={{ type: 'spring', stiffness: 180, damping: 84, delay: 0.08, duration: 1.4 }}
-		>
-			<Image
-				src="/my-image12.png"
-				alt="Foto de Leonardo Braga com a mão no queixo e aparência séria"
-				fill
-				priority
-				quality={100}
-				className="object-cover object-top lg:object-center"
-			/>
-			<div className="pointer-events-none absolute inset-0 hidden bg-linear-to-r from-zinc-950 to-transparent lg:block lg:via-zinc-950/20" />
-			<div className="pointer-events-none absolute inset-0 bg-linear-to-r from-zinc-950 to-transparent lg:via-zinc-950/20" />
+		<>
+			<motion.div
+				className="absolute left-0 h-[120vh] w-full lg:relative lg:-left-40 lg:h-full"
+				initial={{ opacity: 0, x: -80 }}
+				animate={{ opacity: 1, x: 0 }}
+				transition={{ type: 'spring', stiffness: 180, damping: 84, delay: 0.08, duration: 1.4 }}
+			>
+				<Image
+					src="/my-image12.png"
+					alt="Foto de Leonardo Braga com a mão no queixo e aparência séria"
+					fill
+					priority
+					quality={100}
+					className="object-cover object-top lg:object-center"
+				/>
+				<div className="pointer-events-none absolute inset-0 hidden bg-linear-to-r from-zinc-950 to-transparent lg:block lg:via-zinc-950/20" />
+				<div className="pointer-events-none absolute inset-0 bg-linear-to-r from-zinc-950 to-transparent lg:via-zinc-950/20" />
 
-			<div className="pointer-events-none absolute inset-y-0 right-0 block w-1/2 bg-linear-to-l from-zinc-950 via-zinc-950/30 to-transparent lg:hidden lg:w-1/3" />
-		</motion.div>
+				<div className="pointer-events-none absolute inset-y-0 right-0 block w-1/2 bg-linear-to-l from-zinc-950 via-zinc-950/30 to-transparent lg:hidden lg:w-1/3" />
+			</motion.div>
+		</>
 	);
 };
