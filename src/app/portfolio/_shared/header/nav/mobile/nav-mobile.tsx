@@ -22,7 +22,7 @@ export const NavMobile = () => {
 						<CodeIcon color="#fff" />
 					</button>
 				</SheetTrigger>
-				<SheetContent className="bg-transparent px-4 backdrop-blur-md">
+				<SheetContent className="bg-transparent backdrop-blur-md">
 					<SheetHeader>
 						<SheetTitle>
 							<MyLogo />

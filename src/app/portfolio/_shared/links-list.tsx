@@ -16,7 +16,7 @@ export const LinksList = ({ pathname, ulClassName }: LinkListProps) => {
 				return (
 					<motion.li
 						key={link.href}
-						className={`font-geist-sans text-sm ${active ? 'text-blue-400' : 'text-zinc-500 hover:text-zinc-300'}`}
+						className={`font-geist-sans text-base ${active ? 'text-blue-400' : 'text-zinc-500 hover:text-zinc-300'}`}
 						initial={{ opacity: 0, x: -14 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.35, ease: 'easeOut', delay: 0.12 + i * 0.6 }}
