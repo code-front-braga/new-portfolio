@@ -10,7 +10,7 @@ export const AboutBlockList = () => {
 	const blockParam = searchParams.get('block');
 
 	return (
-		<div className="mb-6 grid grid-cols-1 gap-4 px-1">
+		<div className="mb-6 grid grid-cols-1 gap-4">
 			{ABOUT_BLOCK.map((item, i) => {
 				const isActive = blockParam === item.block;
 				return <AboutBlockItem key={item.block} item={item} isActive={isActive} index={i} />;

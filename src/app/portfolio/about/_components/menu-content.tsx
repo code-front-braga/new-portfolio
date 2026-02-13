@@ -51,7 +51,7 @@ export const MenuContent = () => {
 						</div>
 
 						<AboutBlockList />
-						<AboutSectionList selectedProgramming={selectedProgramming} />
+						<AboutSectionList selectedProgramming={selectedProgramming} onItemClick={() => setIsMenuClicked(false)} />
 					</motion.div>
 				)}
 			</AnimatePresence>

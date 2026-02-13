@@ -28,9 +28,7 @@ export const AboutBlockItem = ({ item, isActive, index }: AboutBlockItemProps) =
 				href={{ pathname, query: { block: item.block } }}
 				aria-selected={isActive}
 				className={`flex h-full w-full items-center gap-2 rounded-md p-3 transition-colors ${
-					isActive
-						? 'border border-blue-500 bg-blue-900/40 ring-1 ring-blue-500'
-						: 'border border-transparent bg-zinc-800 hover:bg-zinc-700'
+					isActive ? 'bg-blue-900/40' : 'bg-zinc-800 hover:bg-zinc-700'
 				}`}
 			>
 				<span
