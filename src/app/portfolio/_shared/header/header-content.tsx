@@ -13,7 +13,7 @@ import { SearchContent } from './search/search-content';
 export const HeaderContent = () => {
 	return (
 		<motion.header
-			className="max-w-8xl sticky top-0 z-10 w-full bg-zinc-950 p-4"
+			className="max-w-8xl fixed top-0 z-50 w-full p-4 backdrop-blur-md"
 			initial={{ opacity: 0, y: -16 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -25,7 +25,7 @@ export const HeaderContent = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
 				>
-					<Link href="#home" prefetch={true} className="flex items-center">
+					<Link href="/portfolio/home" prefetch={true} className="flex items-center">
 						<motion.div
 							initial={{ scale: 0, opacity: 0 }}
 							animate={{ scale: 1, opacity: 1 }}

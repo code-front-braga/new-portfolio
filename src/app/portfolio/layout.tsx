@@ -4,9 +4,9 @@ import { HeaderContent } from './_shared/header/header-content';
 
 const PortfolioLayout = ({ children }: ChildrenType) => {
 	return (
-		<main className="bg-zinc-950 flex h-dvh w-full flex-col items-center px-4">
+		<main className="flex h-dvh w-full flex-col items-center bg-zinc-950">
 			<HeaderContent />
-			<div className="container mx-auto h-full">{children}</div>
+			<div className="h-full w-full">{children}</div>
 		</main>
 	);
 };
