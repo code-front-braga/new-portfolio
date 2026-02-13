@@ -11,7 +11,7 @@ export const HomeBeamsBackground = () => {
 				beamNumber={30}
 				lightColor="#ffffff"
 				speed={2}
-				noiseIntensity={2.8}
+				noiseIntensity={2}
 				scale={0.2}
 				rotation={30}
 			/>

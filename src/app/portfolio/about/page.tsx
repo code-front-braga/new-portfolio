@@ -1,5 +1,7 @@
+import { MenuContent } from './_components/menu-content';
+
 const AboutPortfolio = () => {
-	return <h1>About</h1>;
+	return <MenuContent />;
 };
 
 export default AboutPortfolio;

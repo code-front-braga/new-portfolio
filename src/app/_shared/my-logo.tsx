@@ -8,7 +8,7 @@ export const MyLogo = () => {
 	const isMobile = useIsMobile();
 
 	return (
-		<div className="relative flex size-10 items-center justify-center overflow-hidden lg:size-14">
+		<div className="relative flex size-10 items-center justify-center overflow-hidden">
 			<Image
 				src="/icon-logo-header.svg"
 				alt="Logo"

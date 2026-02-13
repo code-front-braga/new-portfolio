@@ -13,7 +13,7 @@ import { SearchContent } from './search/search-content';
 export const HeaderContent = () => {
 	return (
 		<motion.header
-			className="max-w-8xl fixed top-0 z-50 w-full p-4 backdrop-blur-md"
+			className="max-w-8xl fixed top-0 z-50 h-18 w-full bg-zinc-950/70 p-4 backdrop-blur-md"
 			initial={{ opacity: 0, y: -16 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.5, ease: 'easeOut' }}
