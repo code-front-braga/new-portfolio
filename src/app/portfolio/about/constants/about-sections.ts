@@ -1,6 +1,8 @@
 import { CodeXmlIcon, GuitarIcon, HeartIcon, PaletteIcon } from 'lucide-react';
 
-export const ABOUT_SECTIONS = [
+import type { AboutSectionItemData } from '../types';
+
+export const ABOUT_SECTIONS: AboutSectionItemData[] = [
 	{
 		label: 'Programação',
 		href: '#programming',
