@@ -21,9 +21,7 @@ export const HomeImage = () => {
 					className="object-cover object-top lg:object-center"
 				/>
 				<div className="pointer-events-none absolute inset-0 hidden bg-linear-to-r from-zinc-950 to-transparent lg:block lg:via-zinc-950/20" />
-				<div className="pointer-events-none absolute inset-0 bg-linear-to-r from-zinc-950/20 to-transparent" />
-
-				<div className="pointer-events-none absolute inset-y-0 right-0 block w-1/2 bg-linear-to-l from-zinc-950 via-zinc-950/30 to-transparent lg:hidden lg:w-1/3" />
+				<div className="pointer-events-none absolute inset-0 hidden bg-linear-to-r from-zinc-950/20 to-transparent lg:block" />
 			</motion.div>
 		</>
 	);

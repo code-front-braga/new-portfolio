@@ -2,25 +2,21 @@
 
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import { useState } from 'react';
 
-import { ABOUT_SECTIONS } from '../mobile/constants/about-sections';
+import { ProgrammingMainContent } from '../about-sections/programming/programming-main-content';
+import { ABOUT_SECTIONS } from './constants/about-sections';
+import { useSectionNavigation } from './use-section-navigation';
 
 export const MenuContentDesktop = () => {
-	const [currentHash, setCurrentHash] = useState<string>('');
-
-	// useEffect(() => {
-	// 	const update = () => setCurrentHash(window.location.hash);
-	// 	update();
-	// 	window.addEventListener('hashchange', update);
-	// 	return () => window.removeEventListener('hashchange', update);
-	// }, []);
+	const { contentRef, currentHash, makeNavigate } = useSectionNavigation(ABOUT_SECTIONS.map(s => s.href));
 
 	return (
-		<div className="relative top-18 m-auto hidden h-[calc(100vh-72px)] max-w-360 justify-between gap-6 py-12 text-white lg:flex">
+		<div className="relative top-18 m-auto hidden h-[calc(100vh-72px)] max-w-360 justify-between gap-6 pt-12 pb-2 text-white lg:flex">
 			<aside className="h-full w-full max-w-60">lalaala</aside>
 
-			<div className="flex-1">lala</div>
+			<div ref={contentRef} className="custom-scrollbar h-full overflow-y-auto">
+				<ProgrammingMainContent />
+			</div>
 
 			<aside className="flex w-full max-w-60 flex-col items-start gap-4 text-white">
 				<motion.h3
@@ -46,7 +42,7 @@ export const MenuContentDesktop = () => {
 							>
 								<Link
 									href={item.href}
-									onClick={() => setCurrentHash(item.href)}
+									onClick={makeNavigate(item.href)}
 									className={`font-saira group flex items-center gap-2 text-sm font-semibold ${isActive ? 'text-blue-400' : 'text-zinc-400 hover:text-white'}`}
 								>
 									<span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-zinc-900">

@@ -12,7 +12,7 @@ export const HomeSection = ({ children }: ChildrenType) => {
 			animate={{ opacity: 1 }}
 			transition={{ duration: 0.5, ease: 'easeOut' }}
 		>
-      {/* <span className='inset-0 absolute bg-black/90 hidden lg:block'/> */}
+			<span className="absolute inset-0 hidden bg-black/40 lg:block" />
 			{children}
 		</motion.section>
 	);

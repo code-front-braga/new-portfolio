@@ -2,8 +2,8 @@
 
 import { useSearchParams } from 'next/navigation';
 
-import { ABOUT_BLOCK } from './constants/about-block';
 import { AboutBlockItem } from './about-block-item';
+import { ABOUT_BLOCK } from './constants/about-block';
 
 export const AboutBlockList = () => {
 	const searchParams = useSearchParams();

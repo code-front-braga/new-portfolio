@@ -13,7 +13,7 @@ export const SocialsList = () => {
 				<Tooltip key={social.id}>
 					<TooltipTrigger>
 						<motion.li
-							className="flex size-8 items-center justify-center rounded-full bg-zinc-600 hover:bg-zinc-300"
+							className="flex size-8 items-center justify-center rounded-full bg-zinc-400 hover:bg-zinc-300"
 							initial={{ opacity: 0, y: -6, scale: 0.98 }}
 							animate={{ opacity: 1, y: 0, scale: 1 }}
 							transition={{ duration: 0.3, ease: 'easeOut', delay: 0.35 + i * 0.05 }}

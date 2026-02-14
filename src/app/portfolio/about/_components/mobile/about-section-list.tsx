@@ -1,24 +1,22 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { AboutSectionItem } from './about-section-item';
 import { ABOUT_SECTIONS } from './constants/about-sections';
 
 type AboutSectionListProps = {
 	selectedProgramming: boolean | null;
-	onItemClick?: () => void;
+	makeNavigate?: (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => void;
+	currentHash?: string;
 };
 
-export const AboutSectionList = ({ selectedProgramming, onItemClick }: AboutSectionListProps) => {
-	const [currentHash, setCurrentHash] = useState<string>('');
+export const AboutSectionList = ({ selectedProgramming, makeNavigate, currentHash }: AboutSectionListProps) => {
+	const [hashState, setHashState] = useState<string>(currentHash ?? '');
 
-	useEffect(() => {
-		const update = () => setCurrentHash(window.location.hash);
-		update();
-		window.addEventListener('hashchange', update);
-		return () => window.removeEventListener('hashchange', update);
-	}, []);
+	React.useEffect(() => {
+		setHashState(currentHash ?? '');
+	}, [currentHash]);
 
 	if (selectedProgramming === null) return null;
 
@@ -31,8 +29,8 @@ export const AboutSectionList = ({ selectedProgramming, onItemClick }: AboutSect
 					key={item.href}
 					item={item}
 					index={i}
-					onClick={onItemClick}
-					isActive={item.href === currentHash}
+					onClick={makeNavigate ? makeNavigate(item.href) : undefined}
+					isActive={item.href === hashState}
 				/>
 			))}
 		</div>

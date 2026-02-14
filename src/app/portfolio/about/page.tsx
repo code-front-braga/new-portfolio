@@ -1,10 +1,10 @@
 import { MenuContentDesktop } from './_components/desktop/menu-content-desktop';
-import { MenuContent } from './_components/mobile/menu-content';
+import { MenuContentMobile } from './_components/mobile/menu-content-mobile';
 
 const AboutPortfolio = () => {
 	return (
 		<>
-			<MenuContent />
+			<MenuContentMobile />
 			<MenuContentDesktop />
 		</>
 	);

@@ -11,6 +11,13 @@ export const ABOUT_SECTIONS: AboutSectionItemData[] = [
 		isProgramming: true,
 	},
 	{
+		label: 'Carreira',
+		href: '#career',
+		icon: CodeXmlIcon,
+		color: 'text-indigo-400',
+		isProgramming: true,
+	},
+	{
 		label: 'Família',
 		href: '#family',
 		icon: HeartIcon,

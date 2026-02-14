@@ -2,13 +2,14 @@
 
 import { motion } from 'motion/react';
 import Link from 'next/link';
+import type { MouseEvent } from 'react';
 
 import type { AboutSectionItemData } from '../../types';
 
 type AboutSectionItemProps = {
 	item: AboutSectionItemData;
 	index: number;
-	onClick?: () => void;
+	onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
 	isActive?: boolean;
 };
 
