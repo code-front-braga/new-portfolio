@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 
-import { ABOUT_BLOCK } from '../constants/about-block';
+import { ABOUT_BLOCK } from './constants/about-block';
 import { AboutBlockItem } from './about-block-item';
 
 export const AboutBlockList = () => {

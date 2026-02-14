@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
-import { ABOUT_SECTIONS } from '../constants/about-sections';
 import { AboutSectionItem } from './about-section-item';
+import { ABOUT_SECTIONS } from './constants/about-sections';
 
 type AboutSectionListProps = {
 	selectedProgramming: boolean | null;

@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import type { AboutBlockItemData } from '../types';
+import type { AboutBlockItemData } from '../../types';
 
 type AboutBlockItemProps = {
 	item: AboutBlockItemData;

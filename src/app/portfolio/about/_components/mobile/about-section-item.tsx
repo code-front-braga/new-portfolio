@@ -3,7 +3,7 @@
 import { motion } from 'motion/react';
 import Link from 'next/link';
 
-import type { AboutSectionItemData } from '../types';
+import type { AboutSectionItemData } from '../../types';
 
 type AboutSectionItemProps = {
 	item: AboutSectionItemData;

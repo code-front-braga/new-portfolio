@@ -1,6 +1,6 @@
 import { CodeXml, UserRound } from 'lucide-react';
 
-import type { AboutBlockItemData } from '../types';
+import type { AboutBlockItemData } from '../../../types';
 
 export const ABOUT_BLOCK: AboutBlockItemData[] = [
 	{

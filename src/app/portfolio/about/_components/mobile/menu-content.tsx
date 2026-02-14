@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
-import type { BlockSlug } from '../types';
+import type { BlockSlug } from '../../types';
 import { AboutBlockList } from './about-block-list';
 import { AboutSectionList } from './about-section-list';
 import { MenuButton } from './menu-button';

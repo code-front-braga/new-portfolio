@@ -1,6 +1,6 @@
 import { CodeXmlIcon, GuitarIcon, HeartIcon, PaletteIcon } from 'lucide-react';
 
-import type { AboutSectionItemData } from '../types';
+import type { AboutSectionItemData } from '../../../types';
 
 export const ABOUT_SECTIONS: AboutSectionItemData[] = [
 	{

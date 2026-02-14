@@ -1,7 +1,13 @@
-import { MenuContent } from './_components/menu-content';
+import { MenuContentDesktop } from './_components/desktop/menu-content-desktop';
+import { MenuContent } from './_components/mobile/menu-content';
 
 const AboutPortfolio = () => {
-	return <MenuContent />;
+	return (
+		<>
+			<MenuContent />
+			<MenuContentDesktop />
+		</>
+	);
 };
 
 export default AboutPortfolio;
