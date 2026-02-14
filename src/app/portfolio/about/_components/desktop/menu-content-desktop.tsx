@@ -15,7 +15,7 @@ export const MenuContentDesktop = () => {
 			<aside className="h-full w-full max-w-60">lalaala</aside>
 
 			<div ref={contentRef} className="custom-scrollbar h-full overflow-y-auto">
-				<ProgrammingMainContent />
+				<ProgrammingMainContent makeNavigate={makeNavigate} />
 			</div>
 
 			<aside className="flex w-full max-w-60 flex-col items-start gap-4 text-white">

@@ -25,7 +25,7 @@ export const MenuContentMobile = () => {
 	const handleClick = () => setIsMenuClicked(prev => !prev);
 
 	return (
-		<div className="block min-h-screen w-full bg-zinc-900 pb-6 lg:hidden">
+		<div className="block min-h-screen w-full bg-zinc-900 p-4 lg:hidden">
 			<div className="fixed top-18 z-50 flex w-full flex-col items-start gap-2 border-b border-b-zinc-700 bg-zinc-900 p-4">
 				<MenuButton onClick={handleClick} isMenuClicked={isMenuClicked} />
 
@@ -70,7 +70,11 @@ export const MenuContentMobile = () => {
 					)}
 				</AnimatePresence>
 			</div>
-			<ProgrammingMainContent />
+			<ProgrammingMainContent
+				makeNavigate={href => e => {
+					makeNavigate(href)(e);
+				}}
+			/>
 		</div>
 	);
 };
