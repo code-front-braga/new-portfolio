@@ -1,4 +1,4 @@
-import { CodeXmlIcon, GuitarIcon, HeartIcon, PaletteIcon } from 'lucide-react';
+import { BriefcaseBusiness, CodeXmlIcon, GuitarIcon, HeartIcon, PaletteIcon } from 'lucide-react';
 
 import type { AboutSectionItemData } from '../../../types';
 
@@ -13,7 +13,7 @@ export const ABOUT_SECTIONS: AboutSectionItemData[] = [
 	{
 		label: 'Carreira',
 		href: '#career',
-		icon: CodeXmlIcon,
+		icon: BriefcaseBusiness,
 		color: 'text-indigo-400',
 		isProgramming: true,
 	},
