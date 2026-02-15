@@ -30,6 +30,7 @@ export const HeaderContent = () => {
 							initial={{ scale: 0, opacity: 0 }}
 							animate={{ scale: 1, opacity: 1 }}
 							transition={{ type: 'spring', stiffness: 300, damping: 40, delay: 0.12 }}
+							whileHover={{ scale: 1.2, animationDuration: 0.2 }}
 						>
 							<MyLogo />
 						</motion.div>
