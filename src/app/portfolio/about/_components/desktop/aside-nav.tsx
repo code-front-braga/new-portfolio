@@ -20,7 +20,7 @@ export const AsideNav = ({ items, currentHash, makeNavigate }: AsideNavProps) =>
 				transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
 				className="font-saira text-sm font-bold"
 			>
-				Conteúdo da página
+				Navegue
 			</motion.h3>
 			<div className="flex flex-col items-start gap-4">
 				{items.map((item, index) => {

@@ -23,8 +23,8 @@ export const MenuContentMobile = () => {
 	const handleClick = () => setIsMenuClicked(prev => !prev);
 
 	return (
-		<div className="block min-h-screen w-full bg-zinc-900 lg:hidden">
-			<div className="fixed top-18 z-50 flex w-full flex-col items-start gap-2 border-b border-b-zinc-700 bg-zinc-900 p-4">
+		<div className="block min-h-screen w-full bg-zinc-950 lg:hidden">
+			<div className="fixed top-18 z-50 flex w-full flex-col items-start gap-2 bg-zinc-950 p-4">
 				<MenuButton onClick={handleClick} isMenuClicked={isMenuClicked} />
 
 				<AnimatePresence initial={false}>

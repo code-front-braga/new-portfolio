@@ -36,7 +36,7 @@ export const SearchDesktop = () => {
 	return (
 		<>
 			<button
-				className="text-foreground placeholder:text-muted-foreground/70 inline-flex h-9 w-fit rounded bg-zinc-950 px-3 py-2 text-sm shadow-xs transition-[color,box-shadow] outline-none"
+				className="text-foreground placeholder:text-muted-foreground/70 inline-flex h-9 w-fit rounded bg-zinc-900 px-3 py-2 text-sm shadow-xs transition-[color,box-shadow] outline-none"
 				onClick={() => setOpen(true)}
 				type="button"
 			>

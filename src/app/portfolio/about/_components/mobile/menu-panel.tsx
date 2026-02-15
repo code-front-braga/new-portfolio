@@ -21,7 +21,7 @@ export const MobileMenuPanel = ({ onClose, makeNavigate, currentHash, selectedPr
 			animate={{ opacity: 1, y: 0, scaleY: 1 }}
 			exit={{ opacity: 0, y: -12, scaleY: 0.98 }}
 			transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-			className="custom-scrollbar h-screen w-full overflow-y-auto bg-zinc-900 px-1"
+			className="custom-scrollbar h-screen w-full overflow-y-auto bg-zinc-950 px-1"
 		>
 			<div className="mb-4 flex items-center justify-between">
 				<p className="font-geist-sans text-muted-foreground text-xs">Escolha um tópico</p>
