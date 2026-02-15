@@ -93,7 +93,7 @@ export function Section({
 			className={`font-geist-sans block w-full ${content.className ?? ''} ${sectionClassName ?? ''}`}
 			ref={sectionRef}
 		>
-			<div className="space-y-4">
+			<div className="sticky top-0 space-y-4 bg-zinc-950 pb-2">
 				<div className="group flex items-center gap-2">
 					<Link href={`#${content.id}`} onClick={makeNavigate ? makeNavigate(`#${content.id}`) : undefined}>
 						<h2 className="text-4xl font-semibold text-white">{content.title}</h2>

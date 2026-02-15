@@ -29,7 +29,7 @@ export const ReflectiveGallery = ({ images }: { images: string[] }) => {
 			onMouseMove={handleMove}
 			onMouseEnter={handleEnter}
 			onMouseLeave={handleLeave}
-			className="group relative h-full w-full cursor-pointer overflow-hidden rounded bg-zinc-900 ring ring-zinc-800 inset-shadow-red-600"
+			className="group relative h-full w-full overflow-hidden rounded bg-zinc-900 ring ring-zinc-800 inset-shadow-red-600"
 		>
 			<div
 				className="grid h-full w-full grid-flow-row-dense grid-cols-2 gap-0"
