@@ -13,12 +13,12 @@ type AsideNavProps = {
 
 export const AsideNav = ({ items, currentHash, makeNavigate }: AsideNavProps) => {
 	return (
-		<aside className="group flex w-full max-w-20 flex-col items-start gap-4 text-white transition-all duration-600 hover:max-w-60">
+		<aside className="group flex w-full max-w-40 flex-col items-start gap-4 text-white transition-all duration-600 hover:max-w-60">
 			<motion.h3
 				initial={{ opacity: 0, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-				className="font-saira text-sm font-bold"
+				className="font-geist-mono text-xs font-bold"
 			>
 				Navegue
 			</motion.h3>

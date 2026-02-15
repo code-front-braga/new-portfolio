@@ -14,7 +14,7 @@ export const MenuContentDesktop = () => {
 		<div
 			className={`relative top-18 m-auto hidden h-[calc(100vh-72px)] max-w-360 justify-between gap-6 pt-12 pb-2 text-white lg:flex`}
 		>
-			<aside className="relative h-full w-full max-w-20 transition-all duration-600 hover:max-w-60">
+			<aside className="relative h-full w-full max-w-40 transition-all duration-600 hover:max-w-60">
 				<p className="font-geist-sans pointer-events-none absolute top-4 left-1/2 z-20 w-full -translate-x-1/2 text-center text-xs text-white">
 					Passe o mouse
 				</p>
