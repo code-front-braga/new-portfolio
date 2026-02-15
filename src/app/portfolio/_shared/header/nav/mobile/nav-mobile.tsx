@@ -21,7 +21,7 @@ export const NavMobile = () => {
 			<Sheet open={isOpen} onOpenChange={setIsOpen}>
 				<SheetTrigger asChild>
 					<button>
-						<CodeIcon color="#fff" />
+						<CodeIcon size={24} color="#fff" />
 					</button>
 				</SheetTrigger>
 				<SheetContent className="bg-zinc-950">

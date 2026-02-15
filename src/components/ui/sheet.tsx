@@ -66,8 +66,8 @@ function SheetContent({
 			>
 				{children}
 				{showCloseButton && (
-					<SheetPrimitive.Close className="absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none">
-						<CodeXmlIcon size={20} color="#fff" />
+					<SheetPrimitive.Close className="absolute top-6 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none">
+						<CodeXmlIcon size={24} color="#fff" />
 						<span className="sr-only">Close</span>
 					</SheetPrimitive.Close>
 				)}
