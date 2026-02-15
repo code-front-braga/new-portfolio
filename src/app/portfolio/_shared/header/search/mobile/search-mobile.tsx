@@ -22,7 +22,7 @@ export const SearchMobile = () => {
 					<SearchIcon size={16} color="#fff" />
 				</button>
 			</DrawerTrigger>
-			<DrawerContent className="h-screen border-zinc-600 bg-zinc-900 p-4">
+			<DrawerContent className="h-screen border-t border-zinc-700 bg-zinc-950 p-4">
 				<DrawerHeader>
 					<DrawerTitle className="font-geist-sans text-background">Pelo que você está procurando?</DrawerTitle>
 					<DrawerDescription className="font-geist-mono text-muted-foreground">
