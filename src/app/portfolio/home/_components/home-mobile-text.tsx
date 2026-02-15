@@ -21,7 +21,7 @@ export const HomeMobileText = () => {
 					Leonardo
 				</HyperText>
 				<HyperText
-					className="font-geist-sans text-center text-3xl font-semibold text-blue-500 drop-shadow-[0_0_10px_rgba(59,130,246,0.25)]"
+					className="font-geist-sans text-center text-3xl font-semibold text-blue-400 drop-shadow-[0_0_10px_rgba(59,130,246,0.25)]"
 					duration={900}
 				>
 					Braga

@@ -30,7 +30,7 @@ export const AboutSectionItem = ({ item, index, onClick, isActive }: AboutSectio
 						className={`${item.color ?? 'text-white'} drop-shadow-[0_0_8px_rgba(59,130,246,0.35)]`}
 					/>
 				</span>
-				<span className={`font-geist-sans text-sm ${isActive ? 'text-blue-400' : 'text-white'}`}>{item.label}</span>
+				<span className={`font-geist-sans text-sm ${isActive ? 'text-blue-300' : 'text-white'}`}>{item.label}</span>
 			</Link>
 		</motion.div>
 	);

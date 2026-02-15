@@ -27,10 +27,10 @@ export const MenuButton = ({ onClick, isMenuClicked }: MenuButtonProps) => {
 					<ChevronRightIcon size={18} />
 				</span>
 				<span className="font-bold">
-					Menu <span className="font-light text-blue-400">(página atual)</span>
+					Menu <span className="font-light text-blue-300">(página atual)</span>
 				</span>
 			</motion.button>
-			<span className="font-geist-mono text-white">{currentPath}</span>
+			<span className="font-geist-mono text-blue-300">{currentPath}</span>
 		</div>
 	);
 };
