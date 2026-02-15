@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import Link from 'next/link';
 
+import { useIsMobile } from '@/hooks/use-mobile';
+
 import { LINKS } from '../constants/links';
 
 type LinkListProps = {
@@ -10,6 +12,8 @@ type LinkListProps = {
 };
 
 export const LinksList = ({ pathname, ulClassName, onOpen }: LinkListProps) => {
+	const isMobile = useIsMobile();
+
 	return (
 		<ul className={`flex gap-6 ${ulClassName}`}>
 			{LINKS.map((link, i) => {
@@ -18,9 +22,9 @@ export const LinksList = ({ pathname, ulClassName, onOpen }: LinkListProps) => {
 					<motion.li
 						key={link.href}
 						className={`font-geist-sans text-base lg:text-sm ${active ? 'text-blue-300' : 'text-zinc-500 hover:text-zinc-300'}`}
-						initial={{ opacity: 0, x: -14 }}
-						animate={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.35, ease: 'easeOut', delay: 0.12 + i * 0.6 }}
+						initial={{ opacity: 0, ...(isMobile ? { x: -14 } : { y: -8 }) }}
+						animate={{ opacity: 1, ...(isMobile ? { x: 0 } : { y: 0 }) }}
+						transition={{ duration: 0.25, ease: 'easeOut', delay: 0.12 + i * 0.2 }}
 					>
 						<Link href={link.href} onClick={onOpen}>
 							{link.label}
