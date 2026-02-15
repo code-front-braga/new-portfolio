@@ -23,16 +23,19 @@ export const AboutSectionList = ({ selectedProgramming, makeNavigate, currentHas
 	const filtered = ABOUT_SECTIONS.filter(s => s.isProgramming === selectedProgramming);
 
 	return (
-		<div className="grid grid-cols-1 gap-6">
-			{filtered.map((item, i) => (
-				<AboutSectionItem
-					key={item.href}
-					item={item}
-					index={i}
-					onClick={makeNavigate ? makeNavigate(item.href) : undefined}
-					isActive={item.href === hashState}
-				/>
-			))}
+		<div className="space-y-4">
+			<p className="font-geist-sans text-muted-foreground text-xs">Escolha uma seção</p>
+			<div className="grid grid-cols-1 gap-6">
+				{filtered.map((item, i) => (
+					<AboutSectionItem
+						key={item.href}
+						item={item}
+						index={i}
+						onClick={makeNavigate ? makeNavigate(item.href) : undefined}
+						isActive={item.href === hashState}
+					/>
+				))}
+			</div>
 		</div>
 	);
 };
