@@ -24,7 +24,7 @@ export const AsideNav = <T extends NavItemData>({
 	heading = 'Navegue',
 }: AsideNavProps<T>) => {
 	return (
-		<aside className="group flex w-full max-w-40 flex-col items-start gap-4 text-white transition-all duration-600 hover:max-w-60">
+		<aside className="group flex w-full max-w-40 flex-col items-start gap-4 whitespace-nowrap text-white transition-all duration-600 hover:max-w-60 hover:whitespace-normal">
 			<motion.h3
 				initial={{ opacity: 0, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}
@@ -51,11 +51,8 @@ export const AsideNav = <T extends NavItemData>({
 								onClick={makeNavigate(item.href)}
 								className={`font-saira flex items-center gap-1 text-sm font-semibold group-hover:gap-2 ${isActive ? 'text-blue-300' : 'text-zinc-300 hover:text-white'}`}
 							>
-								<span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-zinc-950">
-									<item.icon
-										size={18}
-										className={`${isActive ? item.color : 'text-zinc-300 hover:text-white'} drop-shadow-[0_0_8px_rgba(59,130,246,0.35)]`}
-									/>
+								<span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-zinc-900">
+									<item.icon size={18} className={`${isActive ? item.color : 'text-zinc-300 hover:text-white'}`} />
 								</span>
 								<span className="max-w-0 overflow-hidden opacity-0 transition-all duration-300 group-hover:max-w-[180px] group-hover:opacity-100">
 									{item.label}

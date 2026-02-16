@@ -19,6 +19,7 @@ export type ContentItem = {
 export type SectionContent = {
 	id: string;
 	title: string;
+	subtitle?: string;
 	className?: string;
 	items: ContentItem[];
 };
@@ -94,20 +95,23 @@ export function Section({
 			ref={sectionRef}
 		>
 			<div className="sticky top-0 space-y-4 bg-zinc-950 pb-2">
-				<div className="group flex items-center gap-2">
-					<Link href={`#${content.id}`} onClick={makeNavigate ? makeNavigate(`#${content.id}`) : undefined}>
-						<h2 className="text-4xl font-semibold text-white">{content.title}</h2>
-					</Link>
-					<LinkIcon className="hidden text-zinc-600 group-hover:flex" />
+				<div className="space-y-1">
+					<div className="group flex items-center gap-2">
+						<Link href={`#${content.id}`} onClick={makeNavigate ? makeNavigate(`#${content.id}`) : undefined}>
+							<h2 className="text-4xl font-semibold text-white">{content.title}</h2>
+						</Link>
+						<LinkIcon className="hidden text-zinc-600 group-hover:flex" />
+					</div>
+					{content.subtitle ? <p className="text-base text-zinc-300">{content.subtitle}</p> : null}
 				</div>
 			</div>
-			<Separator className="mt-4 mb-4 w-full bg-zinc-700" />
 			{content.items.map((it, idx) => (
 				<div key={`${content.id}-${idx}`} className="mb-4 space-y-4" data-section-item>
 					<h3 className="text-xl font-semibold text-white">{it.title}</h3>
 					<p className="text-zinc-200">{it.text}</p>
 				</div>
 			))}
+			<Separator className="mt-6 mb-4 w-full bg-zinc-700" />
 		</section>
 	);
 }

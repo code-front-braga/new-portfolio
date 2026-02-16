@@ -1,5 +1,5 @@
-import type { SkillsSectionItemData } from '../../constants/skills-sections';
 import { AsideNav as SharedAsideNav } from '../../../_shared/aside-nav';
+import type { SkillsSectionItemData } from '../../constants/skills-sections';
 
 type AsideNavProps = {
 	items: SkillsSectionItemData[];
