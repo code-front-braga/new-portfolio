@@ -23,7 +23,7 @@ export const SocialsList = () => {
 							</Link>
 						</motion.li>
 					</TooltipTrigger>
-					<TooltipContent className="bg-zinc-950 font-geist-sans">{social.name}</TooltipContent>
+					<TooltipContent className="bg-zinc-900 font-geist-sans">{social.name}</TooltipContent>
 				</Tooltip>
 			))}
 		</ul>
