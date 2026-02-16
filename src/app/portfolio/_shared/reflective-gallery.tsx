@@ -2,10 +2,7 @@
 
 import Image from 'next/image';
 import type { MouseEvent } from 'react';
-
-import { GALLERY_ASSETS } from './constants/gallery-assets';
-
-export const ReflectiveGallery = ({ images }: { images: string[] }) => {
+export const ReflectiveGallery = ({ images }: { images: string[]; overlayVariant?: 'dark' | 'light' }) => {
 	const handleMove = (e: MouseEvent<HTMLDivElement>) => {
 		const rect = e.currentTarget.getBoundingClientRect();
 		const x = e.clientX - rect.left;
@@ -14,7 +11,7 @@ export const ReflectiveGallery = ({ images }: { images: string[] }) => {
 		e.currentTarget.style.setProperty('--y', `${y}px`);
 	};
 	const handleEnter = (e: MouseEvent<HTMLDivElement>) => {
-		e.currentTarget.style.setProperty('--r', '60px');
+		e.currentTarget.style.setProperty('--r', '72px');
 	};
 	const handleLeave = (e: MouseEvent<HTMLDivElement>) => {
 		e.currentTarget.style.setProperty('--r', '0px');
@@ -22,14 +19,17 @@ export const ReflectiveGallery = ({ images }: { images: string[] }) => {
 		e.currentTarget.style.setProperty('--y', '-9999px');
 	};
 
-	const ordered = [GALLERY_ASSETS.image4, ...images.filter(src => src !== GALLERY_ASSETS.image4)];
+	const ordered = images;
+
+	const overlayBackground =
+		'radial-gradient(circle at var(--x, -9999px) var(--y, -9999px), rgba(255,255,255,0.32) 0, rgba(255,255,255,0.16) 12px, rgba(0,0,0,0.55) var(--r, 0px), rgba(0,0,0,0.78) calc(var(--r, 0px) + 20px), #0b0b0c calc(var(--r, 0px) + 40px), #09090b 100%)';
 
 	return (
 		<div
 			onMouseMove={handleMove}
 			onMouseEnter={handleEnter}
 			onMouseLeave={handleLeave}
-			className="group relative h-full w-full overflow-hidden rounded bg-zinc-900 ring ring-zinc-800 inset-shadow-red-600"
+			className="group relative h-full w-full overflow-hidden bg-zinc-900 inset-shadow-red-600"
 		>
 			<div
 				className="grid h-full w-full grid-flow-row-dense grid-cols-2 gap-0"
@@ -45,7 +45,7 @@ export const ReflectiveGallery = ({ images }: { images: string[] }) => {
 								fill
 								unoptimized
 								sizes="(min-width: 1024px) 15rem, 100vw"
-								className="h-full w-full object-cover opacity-95"
+								className="h-full w-full object-cover"
 							/>
 						</div>
 					);
@@ -54,8 +54,7 @@ export const ReflectiveGallery = ({ images }: { images: string[] }) => {
 			<div
 				className="pointer-events-none absolute inset-0"
 				style={{
-					background:
-						'radial-gradient(circle at var(--x, -9999px) var(--y, -9999px), rgba(0,0,0,0.28) 0, rgba(0,0,0,0.88) var(--r, 0px), rgba(0,0,0,0.92) calc(var(--r, 0px) + 20px), rgba(0,0,0,0.97) calc(var(--r, 0px) + 40px), rgba(0,0,0,0.980) 100%)',
+					background: overlayBackground,
 				}}
 			/>
 		</div>

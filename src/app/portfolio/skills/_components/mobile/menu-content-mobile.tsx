@@ -1,24 +1,18 @@
 'use client';
 
 import { AnimatePresence } from 'motion/react';
-import { useSearchParams } from 'next/navigation';
+import type { MouseEvent } from 'react';
 import { useState } from 'react';
 
+import { MenuButton } from '@/app/portfolio/about/_components/mobile/menu-button';
+
 import { useSectionNavigation } from '../../../../../hooks/use-section-navigation';
-import type { BlockSlug } from '../../types';
-import { AboutSectionsContent } from '../about-sections/about-sections-content';
-import { MenuButton } from './menu-button';
+import { SkillsSectionsContent } from '../skills-sections/sections-content';
 import { MobileMenuPanel } from './menu-panel';
 
 export const MenuContentMobile = () => {
 	const [isMenuClicked, setIsMenuClicked] = useState<boolean>(false);
-	const searchParams = useSearchParams();
-	const blockParam = searchParams.get('block') as BlockSlug;
-	const selectedProgramming = blockParam === 'professional' ? true : blockParam === 'personal' ? false : null;
-	const { currentHash, makeNavigate } = useSectionNavigation(
-		['#programming', '#career', '#family', '#draw', '#music'],
-		{ useViewport: true, offset: 140 },
-	);
+	const { makeNavigate } = useSectionNavigation(['#hard', '#soft'], { useViewport: true, offset: 140 });
 
 	const handleClick = () => setIsMenuClicked(prev => !prev);
 
@@ -31,16 +25,16 @@ export const MenuContentMobile = () => {
 					{isMenuClicked && (
 						<MobileMenuPanel
 							onClose={() => setIsMenuClicked(false)}
-							makeNavigate={makeNavigate}
-							currentHash={currentHash}
-							selectedProgramming={selectedProgramming}
+							makeNavigate={(href: string) => (e: MouseEvent<HTMLAnchorElement>) => {
+								makeNavigate(href)(e);
+							}}
 						/>
 					)}
 				</AnimatePresence>
 			</div>
 			<div className="p-4">
-				<AboutSectionsContent
-					makeNavigate={href => e => {
+				<SkillsSectionsContent
+					makeNavigate={(href: string) => (e: MouseEvent<HTMLAnchorElement>) => {
 						makeNavigate(href)(e);
 					}}
 				/>

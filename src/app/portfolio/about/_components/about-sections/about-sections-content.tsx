@@ -5,7 +5,7 @@ import { FamilySection } from './family';
 import { MusicSection } from './music';
 import { ProgrammingSection } from './programming';
 
-export const SectionsContent = ({
+export const AboutSectionsContent = ({
 	sectionClassName,
 	makeNavigate,
 }: {

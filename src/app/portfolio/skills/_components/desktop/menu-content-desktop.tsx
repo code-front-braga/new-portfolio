@@ -3,15 +3,16 @@
 import { PointerIcon } from 'lucide-react';
 import { motion } from 'motion/react';
 
+import { ReflectiveGallery } from '@/app/portfolio/_shared/reflective-gallery';
+
 import { useSectionNavigation } from '../../../../../hooks/use-section-navigation';
-import { ReflectiveGallery } from '../../../_shared/reflective-gallery';
-import { ABOUT_SECTIONS } from '../../constants/about-sections';
-import { AboutSectionsContent } from '../about-sections/about-sections-content';
+import { SKILLS_SECTIONS } from '../../constants/skills-sections';
+import { SkillsSectionsContent } from '../skills-sections/sections-content';
 import { AsideNav } from './aside-nav';
-import { DEFAULT_GALLERY_IMAGES } from './constants/gallery-assets';
+import { DEFAULT_SKILLS_IMAGES } from './constants/skills-assets';
 
 export const MenuContentDesktop = () => {
-	const { contentRef, currentHash, makeNavigate } = useSectionNavigation(ABOUT_SECTIONS.map(s => s.href));
+	const { contentRef, currentHash, makeNavigate } = useSectionNavigation(SKILLS_SECTIONS.map(s => s.href));
 
 	return (
 		<div
@@ -29,16 +30,16 @@ export const MenuContentDesktop = () => {
 						<PointerIcon className="rotate-180" />
 					</motion.span>
 				</div>
-				<ReflectiveGallery images={[...DEFAULT_GALLERY_IMAGES]} />
+				<ReflectiveGallery images={[...DEFAULT_SKILLS_IMAGES]} />
 			</aside>
 
 			<div className="relative h-full flex-1">
 				<div ref={contentRef} className="custom-scrollbar h-full overflow-y-auto pr-8">
-					<AboutSectionsContent makeNavigate={makeNavigate} />
+					<SkillsSectionsContent makeNavigate={makeNavigate} />
 				</div>
 			</div>
 
-			<AsideNav items={ABOUT_SECTIONS} currentHash={currentHash} makeNavigate={makeNavigate} />
+			<AsideNav items={SKILLS_SECTIONS} currentHash={currentHash} makeNavigate={makeNavigate} />
 		</div>
 	);
 };

@@ -8,4 +8,4 @@ export const GALLERY_ASSETS = {
 	note3: '/note3.jpg',
 } as const;
 
-export const DEFAULT_GALLERY_IMAGES = [...Object.values(GALLERY_ASSETS), ...Object.values(GALLERY_ASSETS)];
+export const DEFAULT_GALLERY_IMAGES = [...Object.values(GALLERY_ASSETS)];
