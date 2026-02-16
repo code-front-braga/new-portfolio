@@ -1,9 +1,5 @@
-'use client';
-
-import React, { useState } from 'react';
-
+import { SectionList } from '../../../_shared/mobile/section-list';
 import { ABOUT_SECTIONS } from '../../constants/about-sections';
-import { AboutSectionItem } from './about-section-item';
 
 type AboutSectionListProps = {
 	selectedProgramming: boolean | null;
@@ -12,30 +8,7 @@ type AboutSectionListProps = {
 };
 
 export const AboutSectionList = ({ selectedProgramming, makeNavigate, currentHash }: AboutSectionListProps) => {
-	const [hashState, setHashState] = useState<string>(currentHash ?? '');
-
-	React.useEffect(() => {
-		setHashState(currentHash ?? '');
-	}, [currentHash]);
-
 	if (selectedProgramming === null) return null;
-
 	const filtered = ABOUT_SECTIONS.filter(s => s.isProgramming === selectedProgramming);
-
-	return (
-		<div className="space-y-4">
-			<p className="font-geist-sans text-muted-foreground text-xs">Escolha uma seção</p>
-			<div className="grid grid-cols-1 gap-6">
-				{filtered.map((item, i) => (
-					<AboutSectionItem
-						key={item.href}
-						item={item}
-						index={i}
-						onClick={makeNavigate ? makeNavigate(item.href) : undefined}
-						isActive={item.href === hashState}
-					/>
-				))}
-			</div>
-		</div>
-	);
+	return <SectionList items={filtered} makeNavigate={makeNavigate} currentHash={currentHash} />;
 };

@@ -1,3 +1,5 @@
+'use client';
+
 import { ChevronRightIcon } from 'lucide-react';
 import { motion } from 'motion/react';
 
