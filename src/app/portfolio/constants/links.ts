@@ -17,6 +17,10 @@ export const LINKS = [
 		label: 'Projetos',
 		href: '/portfolio/projects',
 	},
+	{
+		label: 'Currículo',
+		href: '/portfolio/resume',
+	},
 ];
 
 export const COMMAND_LINKS = [

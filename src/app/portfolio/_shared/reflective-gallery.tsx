@@ -22,7 +22,7 @@ export const ReflectiveGallery = ({ images }: { images: string[]; overlayVariant
 	const ordered = images;
 
 	const overlayBackground =
-		'radial-gradient(circle at var(--x, -9999px) var(--y, -9999px), rgba(255,255,255,0.32) 0, rgba(255,255,255,0.16) 12px, rgba(0,0,0,0.55) var(--r, 0px), rgba(0,0,0,0.78) calc(var(--r, 0px) + 20px), #0b0b0c calc(var(--r, 0px) + 40px), #09090b 100%)';
+		'radial-gradient(circle at var(--x, -9999px) var(--y, -9999px), rgba(0,0,0,0) 0, rgba(0,0,0,0) 12px, rgba(0,0,0,0.55) var(--r, 0px), rgba(0,0,0,0.78) calc(var(--r, 0px) + 20px), #09090b calc(var(--r, 0px) + 40px), #09090b 100%)';
 
 	return (
 		<div
