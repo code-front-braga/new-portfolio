@@ -23,7 +23,7 @@ export const MenuShellDesktop = <T extends NavItemData>({
 
 	return (
 		<div
-			className={`relative top-18 m-auto hidden h-[calc(100vh-72px)] max-w-350 justify-between gap-6 pt-12 pb-2 text-white lg:flex`}
+			className={`relative top-18 m-auto hidden h-[calc(100vh-72px)] max-w-350 justify-between gap-6 pt-12 text-white lg:flex`}
 		>
 			<aside className="relative h-full w-full max-w-40 transition-all duration-600 hover:max-w-60">
 				<div className="pointer-events-none absolute top-4 left-1/2 z-20 flex w-full -translate-x-1/2 flex-col items-center gap-1.5 text-center">
