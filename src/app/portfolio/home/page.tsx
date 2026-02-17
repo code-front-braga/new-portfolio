@@ -4,7 +4,7 @@ import { HomeMobileText } from './_components/home-mobile-text';
 import { HomeSection } from './_components/home-section';
 import { HomeTerminal } from './_components/home-terminal';
 
-const HomePortfolio = () => {
+const HomePage = () => {
 	return (
 		<HomeSection>
 			<HomeBeamsBackground />
@@ -16,4 +16,4 @@ const HomePortfolio = () => {
 	);
 };
 
-export default HomePortfolio;
+export default HomePage;
