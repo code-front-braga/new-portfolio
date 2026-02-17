@@ -24,7 +24,7 @@ export const AsideNav = <T extends NavItemData>({
 	heading = 'Navegue',
 }: AsideNavProps<T>) => {
 	return (
-		<aside className="group flex w-full max-w-40 flex-col items-start gap-4 overflow-hidden whitespace-nowrap text-white transition-all duration-600 hover:max-w-60">
+		<aside className="group flex w-full max-w-40 flex-col pl-2 items-start gap-4 overflow-hidden whitespace-nowrap text-white transition-all duration-600 hover:max-w-60">
 			<motion.h3
 				initial={{ opacity: 0, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}

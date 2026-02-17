@@ -24,7 +24,7 @@ export const SectionItem = ({ item, index, onClick, isActive }: SectionItemProps
 			className="group relative flex items-center gap-3 text-left"
 		>
 			<Link href={item.href} onClick={onClick} className="flex h-full w-full items-center gap-2">
-				<span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-zinc-800">
+				<span className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-zinc-800">
 					<item.icon
 						size={18}
 						className={`${item.color ?? 'text-white'} drop-shadow-[0_0_8px_rgba(59,130,246,0.35)]`}
