@@ -24,7 +24,7 @@ export const AsideNav = <T extends NavItemData>({
 	heading = 'Navegue',
 }: AsideNavProps<T>) => {
 	return (
-		<aside className="group flex w-full max-w-40 flex-col items-start gap-4 whitespace-nowrap text-white transition-all duration-600 hover:max-w-60 hover:whitespace-normal">
+		<aside className="group flex w-full max-w-40 flex-col items-start gap-4 overflow-hidden whitespace-nowrap text-white transition-all duration-600 hover:max-w-60">
 			<motion.h3
 				initial={{ opacity: 0, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}
@@ -54,7 +54,7 @@ export const AsideNav = <T extends NavItemData>({
 								<span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-zinc-900">
 									<item.icon size={18} className={`${isActive ? item.color : 'text-zinc-300 hover:text-white'}`} />
 								</span>
-								<span className="max-w-0 overflow-hidden opacity-0 transition-all duration-300 group-hover:max-w-[180px] group-hover:opacity-100">
+								<span className="max-w-0 truncate overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-[180px] group-hover:opacity-100">
 									{item.label}
 								</span>
 							</Link>

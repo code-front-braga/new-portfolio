@@ -108,7 +108,11 @@ export function Section({
 			{content.items.map((it, idx) => (
 				<div key={`${content.id}-${idx}`} className="mb-4 space-y-4" data-section-item>
 					<h3 className="text-xl font-semibold text-white">{it.title}</h3>
-					<p className="text-zinc-200">{it.text}</p>
+					{typeof it.text === 'string' ? (
+						<p className="text-zinc-200">{it.text}</p>
+					) : (
+						<div className="text-zinc-200">{it.text}</div>
+					)}
 				</div>
 			))}
 			<Separator className="mt-6 mb-4 w-full bg-zinc-700" />

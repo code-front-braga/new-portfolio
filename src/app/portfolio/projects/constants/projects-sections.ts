@@ -1,4 +1,4 @@
-import { BoxesIcon } from 'lucide-react';
+import { BoxIcon } from 'lucide-react';
 
 import { REPOSITORIES } from './repositories';
 
@@ -10,7 +10,7 @@ export const PROJECTS_SECTIONS = REPOSITORIES.map((repo, idx) => {
 	return {
 		label: repo.title,
 		href: `#${slug}`,
-		icon: BoxesIcon,
+		icon: BoxIcon,
 		color: ['text-blue-300', 'text-indigo-300', 'text-pink-300', 'text-violet-300'][idx % 4],
 	};
 });

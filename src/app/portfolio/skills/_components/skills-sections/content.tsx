@@ -213,8 +213,8 @@ export const SKILLS_CONTENT: Record<'hard' | 'soft', SectionContent> = {
 		title: 'Soft Skills',
 		items: [
 			{
-				title: 'Competências Pessoais',
-				text: 'Foco em clareza, organização e qualidade de código. Perfil analítico, adaptável e orientado à evolução contínua.',
+				title: 'Competências Profissionais',
+				text: 'Comunicação clara e objetiva, facilitando o alinhamento de ideias e a colaboração com a equipe. Facilidade em trabalhar em equipe, contribuindo de forma colaborativa na construção de soluções e na evolução contínua dos projetos. Perfil analítico, com foco em clareza, organização e qualidade de código, priorizando soluções bem estruturadas e de fácil manutenção.Adaptabilidade e aprendizado contínuo, com capacidade de evoluir rapidamente e acompanhar tecnologias e práticas modernas de desenvolvimento.',
 			},
 		],
 	},
