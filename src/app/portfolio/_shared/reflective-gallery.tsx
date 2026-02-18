@@ -31,26 +31,39 @@ export const ReflectiveGallery = ({ images }: { images: string[]; overlayVariant
 			onMouseLeave={handleLeave}
 			className="group relative h-full w-full overflow-hidden bg-zinc-900 inset-shadow-red-600"
 		>
-			<div
-				className="grid h-full w-full grid-flow-row-dense grid-cols-2 gap-0"
-				style={{ gridTemplateRows: 'minmax(220px, 40%) repeat(3, 1fr)' }}
-			>
-				{ordered.map((src, i) => {
-					const span = i === 0 ? 'col-span-2 row-span-1' : '';
-					return (
-						<div key={`${src}-${i}`} className={`relative ${span}`}>
-							<Image
-								src={src}
-								alt="Galeria"
-								fill
-								unoptimized
-								sizes="(min-width: 1024px) 15rem, 100vw"
-								className="h-full w-full object-cover"
-							/>
-						</div>
-					);
-				})}
-			</div>
+			{ordered.length <= 1 ? (
+				<div className="relative h-full w-full">
+					<Image
+						src={ordered[0] ?? '/placeholder.svg'}
+						alt="Galeria"
+						fill
+						unoptimized
+						sizes="(min-width: 1024px) 15rem, 100vw"
+						className="h-full w-full object-cover"
+					/>
+				</div>
+			) : (
+				<div
+					className="grid h-full w-full grid-flow-row-dense grid-cols-2 gap-0"
+					style={{ gridTemplateRows: 'minmax(220px, 40%) repeat(3, 1fr)' }}
+				>
+					{ordered.map((src, i) => {
+						const span = i === 0 ? 'col-span-2 row-span-1' : '';
+						return (
+							<div key={`${src}-${i}`} className={`relative ${span}`}>
+								<Image
+									src={src}
+									alt="Galeria"
+									fill
+									unoptimized
+									sizes="(min-width: 1024px) 15rem, 100vw"
+									className="h-full w-full object-cover"
+								/>
+							</div>
+						);
+					})}
+				</div>
+			)}
 			<div
 				className="pointer-events-none absolute inset-0"
 				style={{
