@@ -10,7 +10,7 @@ import type { NavigateFn } from '../section';
 
 type MenuShellProps<T extends NavItemData> = {
 	items: T[];
-	images: string[];
+	images: string[] | string;
 	contentComponent: React.ComponentType<{ makeNavigate?: NavigateFn; sectionClassName?: string }>;
 };
 

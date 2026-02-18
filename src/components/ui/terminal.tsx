@@ -200,7 +200,7 @@ export const Terminal = ({ children, className, sequence = true, startOnView = t
 	const content = (
 		<div ref={containerRef} className={cn('z-0 h-full max-h-[600px] w-full max-w-2xl', className)}>
 			<pre className="p-4">
-				<code className="grid gap-y-1 overflow-auto">{wrappedChildren}</code>
+				<code className="custom-scrollbar grid gap-y-1 overflow-auto">{wrappedChildren}</code>
 			</pre>
 		</div>
 	);
