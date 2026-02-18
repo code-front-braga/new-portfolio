@@ -71,13 +71,33 @@ export function useSectionNavigation(hrefs: string[], options?: { useViewport?: 
 
 	React.useEffect(() => {
 		const initial = typeof window !== 'undefined' ? window.location.hash : '';
-		if (initial) setCurrentHash(initial);
-	}, []);
+		if (initial) {
+			setCurrentHash(initial);
+			const run = () => navigateTo(initial);
+			if (typeof window !== 'undefined') {
+				if ('requestAnimationFrame' in window) window.requestAnimationFrame(run);
+				else setTimeout(run, 0);
+			}
+		}
+	}, [navigateTo]);
 
 	useEffect(() => {
 		if (typeof window === 'undefined') return;
 		if (currentHash) window.history.replaceState(null, '', currentHash);
 	}, [currentHash]);
+
+	useEffect(() => {
+		if (typeof window === 'undefined') return;
+		const onHashChange = () => {
+			const h = window.location.hash;
+			if (h) {
+				setCurrentHash(h);
+				navigateTo(h);
+			}
+		};
+		window.addEventListener('hashchange', onHashChange);
+		return () => window.removeEventListener('hashchange', onHashChange);
+	}, [navigateTo]);
 
 	return { contentRef, currentHash, navigateTo, makeNavigate };
 }
