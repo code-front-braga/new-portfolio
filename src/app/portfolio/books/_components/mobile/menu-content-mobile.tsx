@@ -19,7 +19,7 @@ export const MenuContentMobile = () => {
 			contentComponent={BooksSectionsContent}
 			panelComponent={MobileMenuPanel}
 			panelProps={{ selectedPractical }}
-			options={{ useViewport: true, offset: 140 }}
+			options={{ useViewport: true, offset: 140, contentClassName: 'pt-32' }}
 		/>
 	);
 };

@@ -19,7 +19,7 @@ type MobileMenuShellProps<P extends Record<string, unknown> = Record<string, unk
 	contentComponent: React.ComponentType<{ makeNavigate?: NavigateFn; sectionClassName?: string }>;
 	panelComponent: React.ComponentType<BasePanelProps & P>;
 	panelProps?: P;
-	options?: { useViewport?: boolean; offset?: number };
+	options?: { useViewport?: boolean; offset?: number; contentClassName?: string };
 };
 
 export const MenuShellMobile = <P extends Record<string, unknown> = Record<string, unknown>>({
@@ -52,7 +52,7 @@ export const MenuShellMobile = <P extends Record<string, unknown> = Record<strin
 					)}
 				</AnimatePresence>
 			</div>
-			<div className="pt-32 p-4">
+			<div className={`p-4 ${options?.contentClassName ?? ''}`}>
 				<Content
 					makeNavigate={(href: string) => (e: MouseEvent<HTMLAnchorElement>) => {
 						makeNavigate(href)(e);
