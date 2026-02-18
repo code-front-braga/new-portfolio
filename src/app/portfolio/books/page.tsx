@@ -6,7 +6,7 @@ import { MenuContentMobile } from './_components/mobile/menu-content-mobile';
 const BooksPage = () => {
 	return (
 		<>
-			<Suspense fallback={<div className="p-4 text-white lg:hidden">Carregando...</div>}>
+			<Suspense>
 				<MenuContentMobile />
 			</Suspense>
 			<MenuContentDesktop />
