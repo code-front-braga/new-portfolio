@@ -52,7 +52,7 @@ export const MenuShellMobile = <P extends Record<string, unknown> = Record<strin
 					)}
 				</AnimatePresence>
 			</div>
-			<div className="p-4">
+			<div className="pt-32 p-4">
 				<Content
 					makeNavigate={(href: string) => (e: MouseEvent<HTMLAnchorElement>) => {
 						makeNavigate(href)(e);

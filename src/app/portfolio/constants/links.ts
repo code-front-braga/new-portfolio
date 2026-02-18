@@ -1,4 +1,4 @@
-import { BoxesIcon, FileUserIcon, ZapIcon } from 'lucide-react';
+import { BookOpenIcon,BoxesIcon, FileUserIcon, ZapIcon } from 'lucide-react';
 
 export const LINKS = [
 	{
@@ -8,6 +8,10 @@ export const LINKS = [
 	{
 		label: 'Sobre',
 		href: '/portfolio/about',
+	},
+	{
+		label: 'Livros',
+		href: '/portfolio/books',
 	},
 	{
 		label: 'Skills',
@@ -33,6 +37,11 @@ export const COMMAND_LINKS = [
 		label: 'Skills',
 		href: '/portfolio/skills',
 		icon: ZapIcon,
+	},
+	{
+		label: 'Livros',
+		href: '/portfolio/books',
+		icon: BookOpenIcon,
 	},
 	{
 		label: 'Currículo',

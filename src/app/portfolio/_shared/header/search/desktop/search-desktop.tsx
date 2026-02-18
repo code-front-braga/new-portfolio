@@ -11,6 +11,7 @@ import { COMMAND_LINKS } from '@/app/portfolio/constants/links';
 import { PROJECTS_SECTIONS } from '@/app/portfolio/projects/constants/projects-sections';
 import { RESUME_SECTIONS } from '@/app/portfolio/resume/constants/resume-sections';
 import { SKILLS_SECTIONS } from '@/app/portfolio/skills/constants/skills-sections';
+import { BOOKS_SECTIONS } from '@/app/portfolio/books/constants/books-sections';
 import {
 	CommandDialog,
 	CommandEmpty,
@@ -177,6 +178,30 @@ export const SearchDesktop = () => {
 									key={`about-${s.href}`}
 									onSelect={() => {
 										pushRecent({ label: `About — ${s.label}`, href });
+										setOpen(false);
+										router.push(href);
+									}}
+								>
+									<span className="flex w-full items-center justify-between">
+										<div className="flex items-center gap-2">
+											<s.icon size={16} className={s.color} />
+											<span>{s.label}</span>
+										</div>
+										<ArrowUpRightIcon aria-hidden="true" size={16} />
+									</span>
+								</CommandItem>
+							);
+						})}
+					</CommandGroup>
+					<CommandSeparator />
+					<CommandGroup heading="Seções de Livros">
+						{BOOKS_SECTIONS.map(s => {
+							const href = `/portfolio/books${s.href}`;
+							return (
+								<CommandItem
+									key={`books-${s.href}`}
+									onSelect={() => {
+										pushRecent({ label: `Livros — ${s.label}`, href });
 										setOpen(false);
 										router.push(href);
 									}}
