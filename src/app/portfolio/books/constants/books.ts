@@ -94,4 +94,12 @@ export const BOOKS: Book[] = [
 			'Aborda implementação de estruturas de dados e algoritmos utilizando JavaScript, com exemplos práticos, explicações de complexidade e técnicas para escrever código eficiente e escalável.',
 		image: '/books/estrutura-dados.jpg',
 	},
+{
+	title: 'Comunicação Não-Violenta',
+	subtitle: 'Técnicas para aprimorar relacionamentos pessoais e profissionais',
+	author: 'Marshall B. Rosenberg',
+	description:
+		'Apresenta um método prático de comunicação baseado em empatia, escuta ativa e responsabilidade emocional. O livro ensina a expressar sentimentos e necessidades com clareza, reduzir conflitos e construir relações mais honestas, respeitosas e cooperativas, tanto no âmbito pessoal quanto profissional.',
+	image: '/books/comunicacao-nao-violenta.jpg',
+}
 ];

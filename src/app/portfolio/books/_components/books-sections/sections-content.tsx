@@ -5,7 +5,7 @@ import { Section } from '../../../_shared/section';
 import { BOOKS } from '../../constants/books';
 
 const PRODUCTIVITY_IDS = new Set(['Essencialismo: A disciplinada busca por menos']);
-const HABITS_IDS = new Set(['O Poder do Hábito', 'O Poder da Ação']);
+const HABITS_IDS = new Set(['O Poder do Hábito', 'O Poder da Ação', 'Comunicação Não-Violenta']);
 const BUSINESS_IDS = new Set(['A Startup Enxuta', 'Apaixone-se pelo problema e não pela solução']);
 const CUSTOMER_IDS = new Set(['O jeito Disney de encantar os clientes']);
 const INSPIRATION_IDS = new Set(['Nunca deixe de tentar']);
